@@ -11,10 +11,13 @@
 
     <modules>
         <module>coffee-machine</module>
+        <module>storage</module>
     </modules>
 
     <properties>
         <log4j.version>2.19.0</log4j.version>
+        <maven.compiler.source>19</maven.compiler.source>
+        <maven.compiler.target>19</maven.compiler.target>
     </properties>
 
     <reporting>
