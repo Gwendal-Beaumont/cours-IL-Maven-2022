@@ -19,4 +19,17 @@ public class BeanTankTest {
 
         Assertions.assertEquals(coffeeType, beanTank.getBeanCoffeeType());
     }
+
+    @Test
+    public void testIncreaseVolume() {
+        double initialVolume = 0, minVolume = 0, maxVolume = 1000;
+        CoffeeType coffeeType = CoffeeType.valueOf("ARABICA");
+
+        double volumeAdded = 300;
+
+        BeanTank beanTank = new BeanTank(initialVolume, minVolume, maxVolume, coffeeType);
+        beanTank.increaseVolumeInTank(volumeAdded);
+
+        Assertions.assertEquals(volumeAdded, beanTank.getActualVolume());
+    }
 }
